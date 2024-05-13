@@ -34,13 +34,13 @@ class SmtpCheck extends Check
         Assert::nullOrString($encryption = config('mail.mailers.smtp.encryption'));
         Assert::nullOrString($username = config('mail.mailers.smtp.username'));
         Assert::nullOrString($password = config('mail.mailers.smtp.password'));
-        $tls = (null !== $encryption);
+        $tls = ($encryption !== null);
         try {
             $transport = new EsmtpTransport($host, $port, $tls);
-            if (null !== $username) {
+            if ($username !== null) {
                 $transport->setUsername($username);
             }
-            if (null !== $password) {
+            if ($password !== null) {
                 $transport->setPassword($password);
             }
             $transport->start();

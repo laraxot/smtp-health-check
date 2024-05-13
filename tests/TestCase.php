@@ -3,8 +3,8 @@
 namespace laraxot\SmtpHealthCheck\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Orchestra\Testbench\TestCase as Orchestra;
 use laraxot\SmtpHealthCheck\SmtpHealthCheckServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {
